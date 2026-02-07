@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAMA´AC</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <div class="modal-video" id="modalVideo">
+    <div class="modal-contenido">
+      <button class="cerrar" onclick="cerrarModal()">×</button>
+
+      <h3>Conoce nuestro impacto</h3>
+
+      <div class="videos">
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <!-- HEADER / NAV -->
+    <header class="nav">
+      <div class="nav-container">
+        <img src="../IMG/mama_logo_full.png" alt="MAMA AC" class="logo-img" />
+
+        <nav>
+          <a href="#" class="active">Inicio</a>
+          <a href="#">Nosotros</a>
+          <a href="#">Programas</a>
+          <a href="#">Equipo</a>
+          <a href="#">Contacto</a>
+          <a href="#donar" class="btn-donar-nav">
+            <span class="heart">❤</span>
+            Donar
+          </a>
+        </nav>
+      </div>
+      <link
+        rel="icon"
+        href="../IMG/mama_logo_full.png"
+        sizes="32x32"
+        type="image/png"
+      />
+      <link rel="apple-touch-icon" href="IMG/mama_logo_full.png" />
+    </header>
+    <script>
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector(".nav");
+        nav.classList.toggle("scrolled", window.scrollY > 50);
+      });
+    </script>
+
+    <!-- HERO / BANNER -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>
+          Transformando la vida de niñas, niños y adolescentes desde hace más de
+          37 años
+        </h2>
+        <p class="hero-quote">
+          En MAMA´AC creemos que cada niña, niño y adolescente merece un
+          presente protegido y un futuro lleno de oportunidades .Únete a nuestra
+          mision de transformar vidas en Guadalajar y su zona metropolitana.
+          <!--<span>— Mairo Rogelio Padilla</span>-->
+        </p>
+
+        <a href="#donar" class="btn-hero">Acompáñanos</a>
+        <button class="btn-video" onclick="abrirModal()">▶ Conoce más</button>
+        <script>
+          function abrirModal() {
+            document.getElementById("modalVideo").classList.add("activo");
+          }
+
+          function cerrarModal() {
+            document.getElementById("modalVideo").classList.remove("activo");
+          }
+        </script>
+      </div>
+    </section>
+
+    <section class="esencia">
+      <div class="esencia-header">
+        <span class="esencia-tag">Nuestra Esencia</span>
+        <h2>Más que una organización, una familia</h2>
+        <p>
+          Desde 1988, hemos trabajado incansablemente para transformar la vida
+          de niñas, niños y adolescentes en situación de vulnerabilidad en
+          Guadalajara y su zona metropolitana.
+        </p>
+      </div>
+
+      <div class="esencia-grid">
+        <!-- MISIÓN -->
+        <div class="esencia-box">
+          <div class="icono">🎯</div>
+          <h3>Misión</h3>
+          <p>
+            Contribuir a la defensa de los derechos y al empoderamiento de
+            niñas, niños y adolescentes en situación de calle y vulnerabilidad a
+            través de procesos educativos y herramientas para una vida digna.
+          </p>
+        </div>
+
+        <!-- VISIÓN -->
+        <div class="esencia-box">
+          <div class="icono">👁️</div>
+          <h3>Visión</h3>
+          <p>
+            Ser una institución afectiva, congruente y sólida; actuar con un
+            modelo de atención de calidad, innovador, efectivo y consolidado;
+            ser referente en temas de infancia vulnerable con un equipo
+            profesional que trabaja en un ambiente sano.
+          </p>
+        </div>
+
+        <!-- VALORES -->
+        <div class="esencia-box valores">
+          <div class="icono">❤️</div>
+          <h3>Nuestros Valores</h3>
+
+          <ul>
+            <li>
+              <strong>Justicia</strong>
+              <span
+                >Buscamos la equidad y el respeto a los derechos de cada
+                persona.</span
+              >
+            </li>
+            <li>
+              <strong>Esperanza</strong>
+              <span
+                >Creemos en un futuro mejor para cada niño, niña y
+                adolescente.</span
+              >
+            </li>
+            <li>
+              <strong>Responsabilidad</strong>
+              <span
+                >Nos comprometemos con cada acción y decisión que tomamos.</span
+              >
+            </li>
+          </ul>
+
+          <a href="#" class="ver-mas">Ver todos los valores →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔽 AHORA SÍ, DEBAJO DEL HERO -->
+    <section class="impacto">
+      <p class="impacto-texto">
+        Transformando la vida de niñas, niños y adolescentes<br />
+        desde hace más de <strong>37 años</strong>
+      </p>
+
+      <div class="impacto-datos">
+        <div>
+          <span>30+</span>
+          <p>Años de experiencia</p>
+        </div>
+
+        <div>
+          <span>5000+</span>
+          <p>Vidas transformadas</p>
+        </div>
+
+        <div>
+          <span>15+</span>
+          <p>Programas activos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PATROCINADORES -->
+    <section class="patrocinadores">
+      <h3>Nuestros <span>Aliados</span></h3>
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <!-- LOGOS (SE REPITEN DOS VECES PARA LOOP INFINITO) -->
+          <img src="../IMG/LOGOS/7eleven-horizontal.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/AC DEL TROMPO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/AGUA LOKAS EL CHINO.jpeg" alt="Aliado" />
+          <img src="../IMG/LALA.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/ALBERT CAMUS.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/APYMSA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/ARROW.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/AYUNTAMIENTO.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/BOTANAS EL JAROCHO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/cafe trujillo.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/Casa Doña Inés logo.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/CIVILIDAD PARA TRANSFORMAR.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/COA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/cognizant.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/CUPER.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/DE LA ROSA.jpg" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/DIBUJANDO SONRISAS - copia.jpeg"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/EL POLLITO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/ESQUAL.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/EVENTOS UMBRELLA.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/FOTOTECNIA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/FUNDACION ERNESTO MILLAN.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/goodipals.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/GPV.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/GRUPAXERTA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/H. VERSALLES.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/HANDEL.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/HPE.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/IKEA.png" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/IMG-20200218-WA0019 mundo dogo.jpg"
+            alt="Aliado"
+          />
+
+          <img src="../IMG/LOGOS/irm.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/LATTIENDO CAFE.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/LINK BG.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo cambioxcambiofinal.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo COA.png" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/LOGO FUNDACION TELMEX TELCEL.jpeg"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/Logo La Ardilla.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo MotoclubTT.jpg" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/Logo TFLP Los originales - copia(la paz).png"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/logo-EL-PANZON-home.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/logo_electrolit_2025_color.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/moreno tortas.jpg" alt="Aliado" />
+
+          <!-- DUPLICADOS -->
+          <img src="../IMG/LOGOS/7eleven-horizontal.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/AC DEL TROMPO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/AGUA LOKAS EL CHINO.jpeg" alt="Aliado" />
+          <img src="../IMG/LALA.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/ALBERT CAMUS.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/APYMSA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/ARROW.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/AYUNTAMIENTO.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/BOTANAS EL JAROCHO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/cafe trujillo.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/Casa Doña Inés logo.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/CIVILIDAD PARA TRANSFORMAR.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/COA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/cognizant.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/CUPER.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/DE LA ROSA.jpg" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/DIBUJANDO SONRISAS - copia.jpeg"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/EL POLLITO.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/ESQUAL.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/EVENTOS UMBRELLA.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/FOTOTECNIA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/FUNDACION ERNESTO MILLAN.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/goodipals.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/GPV.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/GRUPAXERTA.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/H. VERSALLES.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/HANDEL.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/HPE.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/IKEA.png" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/IMG-20200218-WA0019 mundo dogo.jpg"
+            alt="Aliado"
+          />
+
+          <img src="../IMG/LOGOS/irm.jpeg" alt="Aliado" />
+          <img src="../IMG/LOGOS/LATTIENDO CAFE.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/LINK BG.jpg" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo cambioxcambiofinal.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo COA.png" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/LOGO FUNDACION TELMEX TELCEL.jpeg"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/Logo La Ardilla.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/Logo MotoclubTT.jpg" alt="Aliado" />
+          <img
+            src="../IMG/LOGOS/Logo TFLP Los originales - copia(la paz).png"
+            alt="Aliado"
+          />
+          <img src="../IMG/LOGOS/logo-EL-PANZON-home.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/logo_electrolit_2025_color.png" alt="Aliado" />
+          <img src="../IMG/LOGOS/moreno tortas.jpg" alt="Aliado" />
+        </div>
+      </div>
+    </section>
+
+    <section class="hoy-dia">
+      <div class="hoy-contenido">
+        <h2>Hoy es el <span>día</span></h2>
+        <p>Tu apoyo puede cambiar una historia hoy mismo. No mañana. Hoy.</p>
+
+        <a href="#donar" class="btn-hoy"> ❤ Donar ahora </a>
+      </div>
+    </section>
+
+    <section class="que-hacemos">
+      <div class="qh-contenido">
+        <div class="qh-porcentaje">
+          <span class="numero">100%</span>
+          <p>
+            Comprometidos con nuestros niños<br />para una oportunidad de una
+            vida mejor
+          </p>
+        </div>
+
+        <div class="qh-texto">
+          <h2>¿Qué hacemos?</h2>
+          <p>
+            Trabajamos todos los días para brindar alimentación, atención
+            médica, educación y acompañamiento emocional a niños en situación
+            vulnerable.
+          </p>
+          <p>
+            No solo cubrimos necesidades básicas, construimos caminos hacia un
+            futuro digno, seguro y lleno de oportunidades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="impacto">
+      <div class="impacto-header">
+        <h2>Formas de <span>cambiar una vida hoy</span></h2>
+      </div>
+
+      <div class="impacto-grid">
+        <!-- CARD 1 -->
+        <article class="impacto-card card-uno">
+          <div class="impacto-content">
+            <h3>Dona una vez,<br />impacta todo un año</h3>
+            <p>
+              Sé parte de un programa durante todo el año. Tu gran voluntad y
+              ayuda cambian realidades.
+            </p>
+            <a href="#" class="impacto-link">Quiero saber más</a>
+            <button class="impacto-btn">Donar una vez</button>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="impacto-card card-dos">
+          <div class="impacto-content">
+            <h3>Dona cada mes,<br />acompaña cada paso</h3>
+            <p>
+              Cada día y en cada momento, como benefactor estarás ayudando a que
+              tengan lo necesario para crecer con dignidad.
+            </p>
+            <a href="#" class="impacto-link">Quiero conocer más</a>
+            <button class="impacto-btn">Donar mensualmente</button>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="impacto-card card-tres">
+          <div class="impacto-content">
+            <h3>Apoya un<br />programa específico</h3>
+            <p>
+              Educación, salud emocional y resiliencia. A Toda Madre, La Cocina
+              de Mamá y más.
+            </p>
+            <a href="#" class="impacto-link">Conocer los programas</a>
+            <button class="impacto-btn">Donar a una campaña</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contacto">
+      <div class="contacto-container">
+        <!-- INFO -->
+        <div class="contacto-info">
+          <h3>Estamos aquí para <span>ayudarte</span></h3>
+          <p>
+            En MAMA A.C. valoramos cada consulta, sugerencia o colaboración. No
+            dudes en ponerte en contacto con nosotros a través de cualquiera de
+            nuestros medios.
+          </p>
+
+          <ul class="contacto-datos">
+            <li>
+              <i class="icon correo"></i>
+              <div>
+                <strong>Correo electrónico</strong>
+                <span>contacto@mamaac.org</span>
+              </div>
+            </li>
+
+            <li>
+              <i class="icon telefono"></i>
+              <div>
+                <strong>Teléfono</strong>
+                <span>+52 33 1234 5678</span>
+              </div>
+            </li>
+
+            <li>
+              <i class="icon direccion"></i>
+              <div>
+                <strong>Dirección</strong>
+                <span>Guadalajara, Jalisco, México</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="redes">
+            <p>Síguenos en nuestras redes sociales</p>
+            <div class="redes-icons">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="X">X</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contacto-form">
+          <h4>Envíanos un mensaje</h4>
+
+          <form>
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre" required />
+
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="tucorreo@email.com" required />
+
+            <label>Asunto</label>
+            <input type="text" placeholder="Motivo del mensaje" />
+
+            <label>Mensaje</label>
+            <textarea
+              placeholder="Escribe tu mensaje aquí..."
+              rows="4"
+            ></textarea>
+
+            <div class="privacidad">
+              <input type="checkbox" required />
+              <span> Acepto la <a href="#">política de privacidad</a> </span>
+            </div>
+
+            <button type="submit" class="btn-enviar">✉ Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+
+    </body>
+<section class="equipo-ubicacion">
+  <div class="equipo-contenido">
+    <img
+      src="../IMG/mama_logo_full.png"
+      alt="MAMA A.C."
+      class="equipo-logo"
+    />
+
+    <h2>Nuestro Equipo</h2>
+
+    <p>
+      Conoce al talentoso y comprometido equipo que hace posible
+      nuestra misión.
+    </p>
+
+    <a href="#equipo" class="btn-equipo">
+      Conocer al equipo →
+    </a>
+  </div>
+
+  <div class="equipo-mapa">
+   <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.9110918286357!2d-103.3563175!3d20.6747216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1fa2e5aea9d%3A0xd0a483e1ab42e8f2!2sMAMA%20A.C.!5e0!3m2!1ses!2smx!4v1700000000000"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  </div>
+</section>
+
+
+    <!-- FOOTER -->
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- COLUMNA 1 -->
+        <div class="footer-col">
+          <h3 class="footer-logo">MAMA AC</h3>
+          <p>
+            Transformando vidas desde 1988.<br />
+            Comprometidos con el desarrollo integral de niñas, niños y
+            adolescentes en situación de vulnerabilidad.
+          </p>
+
+          <div class="footer-social">
+            <a href="#">f</a>
+            <a href="#">i</a>
+            <a href="#">x</a>
+            <a href="#">▶</a>
+          </div>
+        </div>
+
+        <!-- COLUMNA 2 -->
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <a href="#">Inicio</a>
+          <a href="#">Nuestros Programas</a>
+          <a href="#">Nuestro Equipo</a>
+          <a href="#">Contáctanos</a>
+          <a href="#">Dona Ahora</a>
+        </div>
+
+        <!-- COLUMNA 3 -->
+        <div class="footer-col">
+          <h4>Contáctanos</h4>
+          <p>
+            📍 Av. Patria 1501, Col. Jardines del Bosque<br />
+            44520 Guadalajara, Jal.
+          </p>
+          <p>✉ vinculacion@mama.org.mx</p>
+          <p>📞 +52 33 3323 1368</p>
+        </div>
+
+        <!-- COLUMNA 4 -->
+        <div class="footer-col">
+          <h4>Boletín Informativo</h4>
+          <p>Suscríbete para recibir noticias y actualizaciones.</p>
+
+          <form class="newsletter">
+            <input type="email" placeholder="Tu correo electrónico" />
+            <button>Suscribirse</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>2025 MAMA AC. Todos los derechos reservados.</span>
+        <div class="footer-legal">
+          <a href="#">Aviso de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+          <a href="#">Política de Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const track = document.querySelector(".patro-track");
+      const prev = document.querySelector(".patro-btn.prev");
+      const next = document.querySelector(".patro-btn.next");
+
+      let index = 0;
+      const step = 230;
+
+      next.addEventListener("click", () => {
+        index++;
+        track.style.transform = `translateX(-${index * step}px)`;
+      });
+
+      prev.addEventListener("click", () => {
+        if (index > 0) {
+          index--;
+          track.style.transform = `translateX(-${index * step}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>
