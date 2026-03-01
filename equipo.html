@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipo - MAMA´AC</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header class="nav">
+        <div class="nav-container">
+            <img src="IMG/mama_logo_full.png" alt="MAMA AC" class="logo-img" />
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="programas.html">Programas</a>
+                <a href="equipo.html" class="active">Equipo</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="#donar" class="btn-donar-nav">
+                    <span class="heart">❤</span> Donar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN INICIAL: LOGO GRANDE -->
+        <section class="equipo-portada">
+            <div class="equipo-portada-container">
+                <img src="IMG/mama_logo_full.png" alt="MAMA AC" class="equipo-logo-grande">
+                <h1 class="equipo-titulo-principal">Conoce el <span>corazón</span> de MAMA´AC</h1>
+                <p class="equipo-descripcion-principal">
+                    Conoce al talentoso y comprometido equipo que hace posible nuestra misión. Cada persona aquí aporta su corazón y talento para transformar vidas.
+                </p>
+                <button class="btn-equipo-conocer" onclick="document.getElementById('equipo-completo').scrollIntoView({behavior: 'smooth'})">
+                    Descubre nuestro equipo ↓
+                </button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN EQUIPO COMPLETO (ÁRBOL ORGANIZACIONAL) -->
+        <section id="equipo-completo" class="equipo-completo">
+            <div class="equipo-container">
+                
+                <!-- LÍNEA DECORATIVA SUPERIOR -->
+                <div class="equipo-linea-decorativa"></div>
+                
+                <!-- NIVEL 1: DIRECCIÓN -->
+                <div class="nivel-organizacional">
+                    <h2 class="nivel-titulo">Dirección General</h2>
+                    <div class="nivel-linea"></div>
+                    <div class="equipo-grid-centrado">
+                        <!-- TARJETA DIRECTORA -->
+                        <div class="equipo-card-destacada">
+                            <div class="card-imagen">
+                                <img src="IMG/Libertad (Directora).png" alt="Libertad Padilla">
+                            </div>
+                            <div class="card-info">
+                                <h3>Libertad Padilla</h3>
+                                <p class="card-cargo">Directora General</p>
+                                <p class="card-descripcion">Liderando la misión y visión de MAMA´AC</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NIVEL 2: ADMINISTRACIÓN Y FINANZAS -->
+                <div class="nivel-organizacional">
+                    <h2 class="nivel-titulo">Administración y Finanzas</h2>
+                    <div class="nivel-linea"></div>
+                    <div class="equipo-grid">
+                        <!-- Sandra Patricia Rodriguez -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/PATRICIA ADMINISTRACION ADMINISTRATIVO .png" alt="Sandra Patricia Rodriguez">
+                            </div>
+                            <div class="card-info">
+                                <h3>Sandra Patricia Rodriguez</h3>
+                                <p class="card-cargo">Coordinadora de Procuración de Fondos</p>
+                                <p class="card-descripcion">Gestionando recursos para nuestros programas</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Rosa Galvan -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/ROSA MARIA GALVAN CONTAVILIDAD ADMNISTRATIVO.png" alt="Rosa Galvan">
+                            </div>
+                            <div class="card-info">
+                                <h3>Rosa Galvan</h3>
+                                <p class="card-cargo">Coordinadora de Contabilidad</p>
+                                <p class="card-descripcion">Administrando los recursos con transparencia</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Nancy Cabrera -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/NANCY FORTALECIMIENTO ADMINISTRATIVO.png" alt="Nancy Cabrera">
+                            </div>
+                            <div class="card-info">
+                                <h3>Nancy Cabrera</h3>
+                                <p class="card-cargo">Coordinadora de Desarrollo Institucional</p>
+                                <p class="card-descripcion">Fortalecimiento institucional y de alianzas</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Guerrero Alvarez Valeria -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/ROSA MARIA GALVAN CONTAVILIDAD ADMNISTRATIVO.png" alt="Guerrero Alvarez Valeria">
+                            </div>
+                            <div class="card-info">
+                                <h3>Guerrero Alvarez Valeria</h3>
+                                <p class="card-cargo">Coordinadora de Comunicación</p>
+                                <p class="card-descripcion">Fortalecimiento institucional y de alianzas</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Tania Jimena Cisneros -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/TANIA AUXILIAR ADMINSTRACION ADMINISTRATIVO.png" alt="Tania Jimena Cisneros">
+                            </div>
+                            <div class="card-info">
+                                <h3>Tania Jimena Cisneros</h3>
+                                <p class="card-cargo">Auxiliar de Administración</p>
+                                <p class="card-descripcion">Apoyo en gestión administrativa</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Mario Ramirez -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/ADMINISTRATIVO/MARIO RECAUDADOR  ADMINISTRATIVO blanco.jpg" alt="Mario Ramirez">
+                            </div>
+                            <div class="card-info">
+                                <h3>Mario Ramirez</h3>
+                                <p class="card-cargo">Recaudador</p>
+                                <p class="card-descripcion">Gestión de donativos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NIVEL 3: COORDINACIÓN DE PROGRAMAS -->
+                <div class="nivel-organizacional">
+                    <h2 class="nivel-titulo">Coordinación de Programas</h2>
+                    <div class="nivel-linea"></div>
+                    <div class="equipo-grid">
+                        <!-- Rafael Espinoza -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/COORDINADORE DE PROGRAMAS/RAFAEL COORDINADOR DE PROGRAMAS .png" alt="Rafael Espinoza">
+                            </div>
+                            <div class="card-info">
+                                <h3>Rafael Espinoza</h3>
+                                <p class="card-cargo">Coordinador de Programas</p>
+                                <p class="card-descripcion">Supervisión general de los programas</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Carlos Arias -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/COORDINADORES/MAIRO CARLOS (COORDINADOR TRABAJO DE CALLE).png" alt="Carlos Arias">
+                            </div>
+                            <div class="card-info">
+                                <h3>Carlos Arias</h3>
+                                <p class="card-cargo">Coordinador de Trabajo en la Calle</p>
+                                <p class="card-descripcion">Acompañamiento en contexto de calle</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Jorge Ivan Gonzalez -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/COORDINADORES/JORGE COORDINADOR PROGRAMA DE ESCUELA.png" alt="Jorge Ivan Gonzalez">
+                            </div>
+                            <div class="card-info">
+                                <h3>Jorge Ivan Gonzalez</h3>
+                                <p class="card-cargo">Coordinador de Escuela</p>
+                                <p class="card-descripcion">Educación y desarrollo integral</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Julia Padilla -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/COORDINADORES/JULIA (COORDINADORA PSICOPEDAGOGIA).png" alt="Julia Padilla">
+                            </div>
+                            <div class="card-info">
+                                <h3>Julia Padilla</h3>
+                                <p class="card-cargo">Coordinadora de Psicopedagogía</p>
+                                <p class="card-descripcion">Atención psicopedagógica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- NIVEL 4: EQUIPO OPERATIVO -->
+                <div class="nivel-organizacional">
+                    <h2 class="nivel-titulo">Equipo Operativo</h2>
+                    <div class="nivel-linea"></div>
+                    <div class="equipo-grid">
+                        <!-- Sele Vega -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/SELENE MAIRA (OPERATIVO) .png" alt="Sele Vega">
+                            </div>
+                            <div class="card-info">
+                                <h3>Sele Vega</h3>
+                                <p class="card-cargo">Educadora</p>
+                                <p class="card-descripcion">Acompañamiento educativo</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Ivan Magadan -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/IVAN EDUCADOR (OPERATIVO) .png" alt="Ivan Magadan">
+                            </div>
+                            <div class="card-info">
+                                <h3>Ivan Magadan</h3>
+                                <p class="card-cargo">Educador</p>
+                                <p class="card-descripcion">Acompañamiento educativo</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Rosa Maria Vazquez -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/ROSA MARIA MAESTRA (OPERATIVO).png" alt="Rosa Maria Vazquez">
+                            </div>
+                            <div class="card-info">
+                                <h3>Rosa Maria Vazquez</h3>
+                                <p class="card-cargo">Maestra</p>
+                                <p class="card-descripcion">Educación básica</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Miranda Alvarez Priscilla -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/PRISCILA MAESRA OPERATIVO.JPG" alt="Miranda Alvarez Priscilla">
+                            </div>
+                            <div class="card-info">
+                                <h3>Miranda Alvarez Priscilla</h3>
+                                <p class="card-cargo">Maestra</p>
+                                <p class="card-descripcion">Acompañamiento educativo</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Peña Ponce Liliana Fabiola -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/FABI PEDAGOGA (operativo).png" alt="Peña Ponce Liliana Fabiola">
+                            </div>
+                            <div class="card-info">
+                                <h3>Peña Ponce Liliana Fabiola</h3>
+                                <p class="card-cargo">Pedagoga</p>
+                                <p class="card-descripcion">Apoyo en los procesos educativos</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Valeria Acosta -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/SELENE MAIRA (OPERATIVO) .png" alt="Valeria Acosta">
+                            </div>
+                            <div class="card-info">
+                                <h3>Valeria Acosta</h3>
+                                <p class="card-cargo">Psicóloga</p>
+                                <p class="card-descripcion">Atención psicológica</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Diego Sanchez -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/CHEF DIEGO (OPERATIVO) Blanco.jpg" alt="Diego Sanchez">
+                            </div>
+                            <div class="card-info">
+                                <h3>Diego Sanchez</h3>
+                                <p class="card-cargo">Coordinador de Comedor y Nutrición</p>
+                                <p class="card-descripcion">Alimentación saludable</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Anva Sebastian Flor de Maria -->
+                        <div class="equipo-card">
+                            <div class="card-imagen">
+                                <img src="IMG/Imagenes_personal/OPERATIVO/FLOR CASA DIGNA (OPERATIVO).png" alt="Anva Sebastian Flor de Maria">
+                            </div>
+                            <div class="card-info">
+                                <h3>Anva Sebastian Flor de Maria</h3>
+                                <p class="card-cargo">Auxiliar Operativo (Casa Digna)</p>
+                                <p class="card-descripcion">Garantiza un entorno seguro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MENSAJE FINAL -->
+                <div class="equipo-mensaje-final">
+                    <p>Cada persona en MAMA´AC es una pieza fundamental en la transformación de vidas. ¡Gracias por ser parte!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-logo">MAMA AC</h3>
+                <p>Transformando vidas desde 1988.<br>Comprometidos con el desarrollo integral de niñas, niños y adolescentes en situación de vulnerabilidad.</p>
+                <div class="footer-social">
+                     <a href="https://www.facebook.com/MAMA.AC.GDL/" aria-label="Facebook">FB</a>
+              <a href="https://www.instagram.com/mama_ac_/" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="X">X</a>
+              <a href="#" aria-label="YouTube">YT</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <a href="index.html">Inicio</a>
+                <a href="programas.html">Nuestros Programas</a>
+                <a href="equipo.html">Nuestro Equipo</a>
+                <a href="contacto.html">Contáctanos</a>
+                <a href="donar.html">Dona Ahora</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <p>📍<span>Calle pavo #112 Colonia Centro Guadaljara Jalisco
+C.P. 44100 Guadalajara, Jal.</span></p>
+                <p>✉ vinculacion@mama.org.mx</p>
+                <p>📞 +52 33 3323 1368</p>
+            </div>
+            <div class="footer-col">
+                <h4>Boletín Informativo</h4>
+                <p>Suscríbete para recibir noticias y actualizaciones.</p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Tu correo electrónico" />
+                    <button>Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>2025 MAMA AC. Todos los derechos reservados.</span>
+            <div class="footer-legal">
+                <a href="#">Aviso de Privacidad</a>
+                <a href="#">Términos de Uso</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
