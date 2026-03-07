@@ -12,6 +12,8 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="IMG/mama_logo_full.png">
+
   </head>
  
   <body>
@@ -56,7 +58,7 @@
           37 años
         </h2>
         <p class="hero-quote">
-          En MAMA´AC creemos que cada niña, niño y adolescente merece un
+          En MAMA AC creemos que cada niña, niño y adolescente merece un
           presente protegido y un futuro lleno de oportunidades .Únete a nuestra
           mision de transformar vidas en Guadalajar y su zona metropolitana.
           <!--<span>— Mairo Rogelio Padilla</span>-->
@@ -152,7 +154,30 @@
     </div>
 </div>
     </section>
+    </section> <!-- Este es el cierre del hero -->
 
+    <!-- NUEVA SECCIÓN: VIDEO DESTACADO (Cuestionario 14 de Mayo) -->
+    <section class="video-destacado">
+        <div class="video-destacado-container">
+            <div class="video-destacado-contenido">
+                <div class="video-destacado-texto">
+                    <span class="video-badge">Contenido Exclusivo</span>
+                    <h3><span class="destacar">MAMA A.C.</span></h3>
+                    <p class="video-descripcion">
+                        Gracias a la unión de esfuerzos solidarios de personas, empresas e instituciones, <strong>MAMA A.C.</strong> protege, acompaña y abre oportunidades para que niñas, niños y adolescentes vivan un presente digno y construyan un futuro lleno de esperanza.
+                    </p>
+                </div>
+                <div class="video-destacado-frame">
+                    <video controls width="100%" height="auto">
+                        <source src="../MP4/VIDEO DE INFORME ANUAL.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
     <section class="esencia">
       <div class="esencia-header">
         <span class="esencia-tag">Nuestra Esencia</span>
@@ -216,7 +241,7 @@
             </li>
           </ul>
 
-          <a href="#" class="ver-mas">Ver todos los valores →</a>
+          <a href="Nosotros.html" class="ver-mas">Ver todos los valores →</a>
         </div>
       </div>
     </section>
@@ -239,10 +264,6 @@
           <p>Vidas transformadas</p>
         </div>
 
-        <div>
-          <span>15+</span>
-          <p>Programas activos</p>
-        </div>
       </div>
     </section>
 
@@ -466,7 +487,7 @@
               <i class="icon correo"></i>
               <div>
                 <strong>Correo electrónico</strong>
-                <span>vinculacion@mama.org.mx</span>
+                <span> recaudacion@mama.org.mx</span>
               </div>
             </li>
 
@@ -505,29 +526,26 @@
         <div class="contacto-form">
           <h4>Envíanos un mensaje</h4>
 
-          <form>
-            <label>Nombre completo</label>
-            <input type="text" placeholder="Tu nombre" required />
+          <form action="mailto:recaudacion@mama.org.mx" method="post" enctype="text/plain">
+  <label>Nombre completo</label>
+  <input type="text" name="nombre" placeholder="Tu nombre" required />
 
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="tucorreo@email.com" required />
+  <label>Correo electrónico</label>
+  <input type="email" name="email" placeholder="tucorreo@email.com" required />
 
-            <label>Asunto</label>
-            <input type="text" placeholder="Motivo del mensaje" />
+  <label>Asunto</label>
+  <input type="text" name="asunto" placeholder="Motivo del mensaje" />
 
-            <label>Mensaje</label>
-            <textarea
-              placeholder="Escribe tu mensaje aquí..."
-              rows="4"
-            ></textarea>
+  <label>Mensaje</label>
+  <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
 
-            <div class="privacidad">
-              <input type="checkbox" required />
-              <span> Acepto la <a href="#">política de privacidad</a> </span>
-            </div>
+  <div class="privacidad">
+    <input type="checkbox" required />
+    <span> Acepto la <a href="#">política de privacidad</a> </span>
+  </div>
 
-            <button type="submit" class="btn-enviar">✉ Enviar mensaje</button>
-          </form>
+  <button type="submit" class="btn-enviar">✉ Enviar mensaje</button>
+</form>
         </div>
       </div>
     </section>
@@ -606,7 +624,7 @@
                 📍 Calle Pavo #112, Colonia Centro<br />
                 Guadalajara, Jalisco C.P. 44100
             </p>
-            <p>✉ vinculacion@mama.org.mx</p>
+            <p>✉ recaudacion@mama.org.mx</p>
             <p>📞 +52 33 3323 1368</p>
         </div>
 
@@ -696,6 +714,107 @@
     function cerrarModal() {
         document.getElementById("modalVideo").classList.remove("activo");
     }
+    
 </script>
+<script>
+    // Efecto de contador animado (versión rápida)
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configuración de los contadores
+        const counters = [
+            { element: document.querySelector('.impacto-datos div:first-child span'), target: 30, suffix: '+' },
+            { element: document.querySelector('.impacto-datos div:last-child span'), target: 5000, suffix: '+' }
+        ];
+        
+        // Función para animar cada contador
+        function animarContador(elemento, target, suffix, duracion = 1000) {
+            const inicio = 0;
+            const paso = target / (duracion / 10); // Actualizar cada 10ms
+            let valorActual = inicio;
+            
+            const intervalo = setInterval(() => {
+                valorActual += paso;
+                
+                if (valorActual >= target) {
+                    elemento.textContent = target + suffix;
+                    clearInterval(intervalo);
+                } else {
+                    elemento.textContent = Math.floor(valorActual) + suffix;
+                }
+            }, 10);
+        }
+        
+        // Iniciar animación cuando el elemento sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Cuando la sección es visible, iniciar contadores
+                    counters.forEach(counter => {
+                        counter.element.textContent = '0+'; // Resetear a 0
+                        animarContador(counter.element, counter.target, counter.suffix);
+                    });
+                    // Dejar de observar después de iniciar
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 }); // Disparar cuando el 50% de la sección sea visible
+        
+        // Observar la sección de impacto
+        const seccionImpacto = document.querySelector('.impacto');
+        if (seccionImpacto) {
+            observer.observe(seccionImpacto);
+        }
+    });
+</script>
+<script>
+    // Efecto de contador animado (versión rápida)
+    document.addEventListener('DOMContentLoaded', function() {
+        // Configuración de los contadores
+        const counters = [
+            { element: document.querySelector('.impacto-datos div:first-child span'), target: 30, suffix: '+' },
+            { element: document.querySelector('.impacto-datos div:last-child span'), target: 5000, suffix: '+' }
+        ];
+        
+        // Función para animar cada contador
+        function animarContador(elemento, target, suffix, duracion = 1000) {
+            const inicio = 0;
+            const paso = target / (duracion / 20); // Actualizar cada 10ms
+            let valorActual = inicio;
+            
+            const intervalo = setInterval(() => {
+                valorActual += paso;
+                
+                if (valorActual >= target) {
+                    elemento.textContent = target + suffix;
+                    clearInterval(intervalo);
+                } else {
+                    elemento.textContent = Math.floor(valorActual) + suffix;
+                }
+            }, 10);
+        }
+        
+        // Iniciar animación cuando el elemento sea visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Cuando la sección es visible, iniciar contadores
+                    counters.forEach(counter => {
+                        counter.element.textContent = '0+'; // Resetear a 0
+                        animarContador(counter.element, counter.target, counter.suffix);
+                    });
+                    // Dejar de observar después de iniciar
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 }); // Disparar cuando el 50% de la sección sea visible
+        
+        // Observar la sección de impacto
+        const seccionImpacto = document.querySelector('.impacto');
+        if (seccionImpacto) {
+            observer.observe(seccionImpacto);
+        }
+    });
+</script>
+
+
   </body>
 </html>

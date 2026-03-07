@@ -6,6 +6,8 @@
     <title>Contacto - MAMA´AC</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" type="image/png" href="IMG/mama_logo_full.png">
+
 </head>
 <body>
     <header class="nav">
@@ -40,7 +42,7 @@
                     <p>En MAMA A.C. valoramos cada consulta, sugerencia o colaboración. No dudes en ponerte en contacto con nosotros a través de cualquiera de nuestros medios.</p>
 
                     <ul class="contacto-datos">
-                        <li><i class="icon correo"></i><div><strong>Correo electrónico</strong><span>vinculacion@mama.org.mx</span></div></li>
+                        <li><i class="icon correo"></i><div><strong>Correo electrónico</strong><span>recaudacion@mama.org.mx</span></div></li>
                         <li><i class="icon telefono"></i><div><strong>Teléfono</strong><span>+52 33 3323 1368</span></div></li>
                         <li><i class="icon direccion"></i><div><strong>Dirección</strong><span>Calle pavo #112 Colonia Centro Guadaljara Jalisco
 C.P. 44100 Guadalajara, Jal.</span></div></li>
@@ -59,26 +61,26 @@ C.P. 44100 Guadalajara, Jal.</span></div></li>
 
                 <div class="contacto-form">
                     <h4>Envíanos un mensaje</h4>
-                    <form>
-                        <label>Nombre completo</label>
-                        <input type="text" placeholder="Tu nombre" required />
+                    <form action="mailto:recaudacion@mama.org.mx" method="post" enctype="text/plain">
+  <label>Nombre completo</label>
+  <input type="text" name="nombre" placeholder="Tu nombre" required />
 
-                        <label>Correo electrónico</label>
-                        <input type="email" placeholder="tucorreo@email.com" required />
+  <label>Correo electrónico</label>
+  <input type="email" name="email" placeholder="tucorreo@email.com" required />
 
-                        <label>Asunto</label>
-                        <input type="text" placeholder="Motivo del mensaje" />
+  <label>Asunto</label>
+  <input type="text" name="asunto" placeholder="Motivo del mensaje" />
 
-                        <label>Mensaje</label>
-                        <textarea placeholder="Escribe tu mensaje aquí..." rows="4"></textarea>
+  <label>Mensaje</label>
+  <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
 
-                        <div class="privacidad">
-                            <input type="checkbox" required />
-                            <span> Acepto la <a href="#">política de privacidad</a> </span>
-                        </div>
+  <div class="privacidad">
+    <input type="checkbox" required />
+    <span> Acepto la <a href="#">política de privacidad</a> </span>
+  </div>
 
-                        <button type="submit" class="btn-enviar">✉ Enviar mensaje</button>
-                    </form>
+  <button type="submit" class="btn-enviar">✉ Enviar mensaje</button>
+</form>
                 </div>
             </div>
         </section>
