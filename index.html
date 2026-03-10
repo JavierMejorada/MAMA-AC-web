@@ -60,7 +60,7 @@
         <p class="hero-quote">
           En MAMA AC creemos que cada niña, niño y adolescente merece un
           presente protegido y un futuro lleno de oportunidades .Únete a nuestra
-          mision de transformar vidas en Guadalajar y su zona metropolitana.
+          mision de transformar vidas en Guadalajara y su zona metropolitana.
           <!--<span>— Mairo Rogelio Padilla</span>-->
         </p>
 
@@ -156,27 +156,86 @@
     </section>
     </section> <!-- Este es el cierre del hero -->
 
-    <!-- NUEVA SECCIÓN: VIDEO DESTACADO (Cuestionario 14 de Mayo) -->
-    <section class="video-destacado">
-        <div class="video-destacado-container">
-            <div class="video-destacado-contenido">
-                <div class="video-destacado-texto">
-                    <span class="video-badge">Contenido Exclusivo</span>
-                    <h3><span class="destacar">MAMA A.C.</span></h3>
-                    <p class="video-descripcion">
-                        Gracias a la unión de esfuerzos solidarios de personas, empresas e instituciones, <strong>MAMA A.C.</strong> protege, acompaña y abre oportunidades para que niñas, niños y adolescentes vivan un presente digno y construyan un futuro lleno de esperanza.
-                    </p>
+   <!-- NUEVA SECCIÓN: INFORME ANUAL 2025 CON CARRUSEL -->
+<section class="informe-anual">
+    <div class="informe-container">
+        <!-- TEXTO DEL INFORME -->
+        <div class="informe-texto">
+            <span class="seccion-badge">Informe Anual 2025</span>
+            <h2>Nuestro <span>impacto</span> en cifras</h2>
+            <p class="informe-descripcion">
+                Durante 2025, gracias a tu apoyo, logramos transformar la vida de <strong>176 niñas, niños y adolescentes</strong> en situación de vulnerabilidad. Cada número representa una historia, un sueño y una oportunidad.
+            </p>
+            
+            <div class="informe-destacados">
+                <div class="destacado-item">
+                    <span class="destacado-numero">23,845</span>
+                    <span class="destacado-label">Platillos servidos</span>
                 </div>
-                <div class="video-destacado-frame">
-                    <video controls width="100%" height="auto">
-                        <source src="../MP4/VIDEO DE INFORME ANUAL.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+                <div class="destacado-item">
+                    <span class="destacado-numero">4,423</span>
+                    <span class="destacado-label">Asistencias a clases</span>
+                </div>
+                <div class="destacado-item">
+                    <span class="destacado-numero">7,553</span>
+                    <span class="destacado-label">Asistencias a talleres</span>
                 </div>
             </div>
+            
+            <a href="donar.html" class="btn-informe">❤ Apoya nuestro 2026</a>
         </div>
-    </section>
-
+        
+        <!-- CARRUSEL DE IMÁGENES -->
+        <div class="informe-carrusel">
+            <div class="carrusel-slides" id="informeSlides">
+                <!-- Las imágenes se cargarán desde la carpeta -->
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla_9-3-2026_212828_.jpeg" alt="MAMA AC Informe 2025">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213618.png" alt="176 niños atendidos">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213554.png" alt="Datos de escuela">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213520.png" alt="73 niños atendidos">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213405.png" alt="80 niños atendidos">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213343.png" alt="23 adolescentes">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213220.png" alt="Psicopedagogía">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213156.png" alt="Alimentación">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213136.png" alt="Capacitaciones">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213115.png" alt="Alianzas estratégicas">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 213015.png" alt="Ingresos y egresos">
+                </div>
+                <div class="slide">
+                    <img src="IMG/informe2025/Captura de pantalla 2026-03-09 212946.png" alt="Gracias">
+                </div>
+            </div>
+            
+            <!-- Controles del carrusel -->
+            <button class="carrusel-control prev" onclick="cambiarSlide(-1)">❮</button>
+            <button class="carrusel-control next" onclick="cambiarSlide(1)">❯</button>
+            
+            <!-- Indicadores (puntos) -->
+            <div class="carrusel-indicadores" id="carruselIndicadores"></div>
+        </div>
+    </div>
+</section>
   
     <section class="esencia">
       <div class="esencia-header">
@@ -814,7 +873,86 @@
         }
     });
 </script>
-
+<script>
+    // Carrusel de imágenes del Informe Anual
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.slide');
+        const slidesContainer = document.getElementById('informeSlides');
+        const indicadoresContainer = document.getElementById('carruselIndicadores');
+        
+        if (!slides.length || !slidesContainer) return;
+        
+        let currentIndex = 0;
+        let autoPlayInterval;
+        const totalSlides = slides.length;
+        
+        // Crear indicadores (puntos)
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.setAttribute('onclick', `irAlSlide(${i})`);
+            indicadoresContainer.appendChild(dot);
+        }
+        
+        const dots = document.querySelectorAll('.carrusel-indicadores .dot');
+        
+        // Función para ir a un slide específico
+        window.irAlSlide = function(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            
+            currentIndex = index;
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Actualizar puntos
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+        
+        // Función para cambiar slide (usada por los botones)
+        window.cambiarSlide = function(direccion) {
+            irAlSlide(currentIndex + direccion);
+            // Reiniciar autoplay
+            clearInterval(autoPlayInterval);
+            iniciarAutoplay();
+        };
+        
+        // Iniciar autoplay (cambia cada 5 segundos)
+        function iniciarAutoplay() {
+            autoPlayInterval = setInterval(() => {
+                irAlSlide(currentIndex + 1);
+            }, 5000); // 5 segundos
+        }
+        
+        // Inicializar
+        irAlSlide(0);
+        iniciarAutoplay();
+        
+        // Pausar autoplay cuando el mouse está sobre el carrusel
+        const carrusel = document.querySelector('.informe-carrusel');
+        carrusel.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+        
+        carrusel.addEventListener('mouseleave', () => {
+            iniciarAutoplay();
+        });
+        
+        // Pausar autoplay cuando la pestaña no está visible
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                clearInterval(autoPlayInterval);
+            } else {
+                iniciarAutoplay();
+            }
+        });
+    });
+</script>
 
   </body>
 </html>
