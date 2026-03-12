@@ -390,8 +390,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.9);
+background: rgba(255, 255, 255, 0.95);  /* Blanco con 95% opaco */
   backdrop-filter: blur(6px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);  /* Sombra suave para destacar */
 }
 
 
@@ -409,7 +410,7 @@ body {
 }
 
 nav a {
-  color: var(--blanco);
+  color:#C12900;
   text-decoration: none;
   margin-left: 20px;
   font-size: 0.9rem;
@@ -423,8 +424,16 @@ nav a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--naranja);
+  background:  #FF8500;
   transition: width 0.3s;
+}
+nav a.active {
+  color: #FF8500;  /* Naranja más claro para el activo */
+  font-weight: 600;
+}
+
+nav a.active::after {
+  width: 100%;  /* Línea siempre visible para el activo */
 }
 
 nav a:hover::after,
@@ -1490,7 +1499,8 @@ body {
   padding-top: 65px;
 }
 .nav.scrolled {
-  background: rgba(15, 23, 42, 0.98);
+  background: rgba(255, 255, 255, 0.98);  /* Blanco al hacer scroll */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);  /* Sombra para dar profundidad */
 }
 
 /* =============================
@@ -1760,7 +1770,7 @@ body {
 
 /* HOVER DEL BOTÓN */
 .btn-donar-nav:hover {
-  background-color: #BF5A38;
+  background-color: #C12900;
   transform: translateY(-1px);
 }
 
