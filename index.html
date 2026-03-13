@@ -126,22 +126,7 @@
                             Cada acción cuenta. Tu apoyo hace posible que sigamos transformando vidas y construyendo un futuro mejor para cientos de niñas, niños y adolescentes en Guadalajara y su zona metropolitana.
                         </p>
                     </div>
-                    <div class="video-frame">
-                        <!-- Para videos de YouTube 
-                        <iframe 
-                            src="https://www.youtube.com/embed/VIDEO_ID_2" 
-                            title="Video MAMA A.C. Ayuda"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>-->
-                        
-                        <!-- Para videos locales MP4--->
-                        <video controls width="100%" height="250">
-                            <source src="../MP4/VIDEO DE INFORME ANUAL.mp4" type="video/mp4">
-                            Tu navegador no soporta el elemento de video.
-                        </video>
-                        
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -562,7 +547,7 @@ No solo cubrimos necesidades básicas, contribuimos a generar oportunidades y a 
               <div>
                 <strong>Dirección</strong>
                 <span>
-                  📍  Calle pavo #112 Colonia Centro Guadaljara Jalisco<br />
+                  📍  Calle Pavo #112 Colonia Centro Guadaljara Jalisco<br />
              C.P. 44100 Guadalajara, Jal.
                 </span>
               </div>
@@ -965,6 +950,52 @@ No solo cubrimos necesidades básicas, contribuimos a generar oportunidades y a 
         });
     });
 </script>
-
+<script>
+    // Menú hamburguesa para móvil
+    document.addEventListener('DOMContentLoaded', function() {
+        // Crear el botón hamburguesa
+        const nav = document.querySelector('nav');
+        const navContainer = document.querySelector('.nav-container');
+        
+        // Crear el botón si no existe
+        if (!document.querySelector('.menu-toggle')) {
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.innerHTML = '☰';
+            menuToggle.setAttribute('aria-label', 'Menú');
+            
+            // Insertar el botón después del logo
+            const logo = document.querySelector('.logo-img');
+            navContainer.insertBefore(menuToggle, logo.nextSibling);
+            
+            // Función para toggle del menú
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                // Cambiar el ícono (opcional)
+                if (nav.classList.contains('active')) {
+                    menuToggle.innerHTML = '✕';
+                } else {
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+        }
+    });
+</script>
   </body>
 </html>

@@ -97,13 +97,7 @@
                             <a href="contacto.html" class="sidebar-btn sidebar-btn-voluntario"><i class="fas fa-hand-peace"></i> Ser voluntario</a>
                         </div>
 
-                        <div class="sidebar-card">
-                            <h3>Información adicional</h3>
-                            <ul class="sidebar-info">
-                                <li><i class="fas fa-calendar-alt"></i> <strong>Edades:</strong> 10 a 23 años</li>
-                            
-                            </ul>
-                        </div>
+                        
 
                         <div class="sidebar-card">
                             <h3>Comparte</h3>
@@ -187,5 +181,52 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Menú hamburguesa para móvil
+    document.addEventListener('DOMContentLoaded', function() {
+        // Crear el botón hamburguesa
+        const nav = document.querySelector('nav');
+        const navContainer = document.querySelector('.nav-container');
+        
+        // Crear el botón si no existe
+        if (!document.querySelector('.menu-toggle')) {
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.innerHTML = '☰';
+            menuToggle.setAttribute('aria-label', 'Menú');
+            
+            // Insertar el botón después del logo
+            const logo = document.querySelector('.logo-img');
+            navContainer.insertBefore(menuToggle, logo.nextSibling);
+            
+            // Función para toggle del menú
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                // Cambiar el ícono (opcional)
+                if (nav.classList.contains('active')) {
+                    menuToggle.innerHTML = '✕';
+                } else {
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

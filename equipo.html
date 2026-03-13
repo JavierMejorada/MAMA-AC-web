@@ -61,7 +61,7 @@
                         <!-- TARJETA DIRECTORA -->
                         <div class="equipo-card-destacada">
                             <div class="card-imagen">
-                                <img src="IMG/Libertad (Directora).png" alt="Libertad Padilla">
+                                <img src="IMG/libertad.jpeg" alt="Libertad Padilla">
                             </div>
                             <div class="card-info">
                                 <h3>Libertad Iniuh Ramìrez Padilla</h3>
@@ -189,7 +189,7 @@
                     <img src="IMG/Imagenes_personal/COORDINADORES/JORGE COORDINADOR PROGRAMA DE ESCUELA.png" alt="Jorge Ivan Gonzalez">
                 </div>
                 <div class="card-info">
-                    <h3>Jorge Ivan Gonzàlez Flores</h3>
+                    <h3>Iván G. Magadan Delgado</h3>
                     <p class="card-cargo">Coordinador de Escuela</p>
                     <p class="card-descripcion">Educación y desarrollo integral</p>
                 </div>
@@ -365,5 +365,52 @@ C.P. 44100 Guadalajara, Jal.</span></p>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Menú hamburguesa para móvil
+    document.addEventListener('DOMContentLoaded', function() {
+        // Crear el botón hamburguesa
+        const nav = document.querySelector('nav');
+        const navContainer = document.querySelector('.nav-container');
+        
+        // Crear el botón si no existe
+        if (!document.querySelector('.menu-toggle')) {
+            const menuToggle = document.createElement('div');
+            menuToggle.className = 'menu-toggle';
+            menuToggle.innerHTML = '☰';
+            menuToggle.setAttribute('aria-label', 'Menú');
+            
+            // Insertar el botón después del logo
+            const logo = document.querySelector('.logo-img');
+            navContainer.insertBefore(menuToggle, logo.nextSibling);
+            
+            // Función para toggle del menú
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+                // Cambiar el ícono (opcional)
+                if (nav.classList.contains('active')) {
+                    menuToggle.innerHTML = '✕';
+                } else {
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                    nav.classList.remove('active');
+                    menuToggle.innerHTML = '☰';
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
